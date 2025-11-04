@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Custom Slider Styles */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #3B82F6 0%, #3B82F6 30%, #E5E7EB 30%, #E5E7EB 100%);
+    outline: none;
+    border-radius: 15px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 3px solid #3B82F6;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 3px solid #3B82F6;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.game-button {
+    background: linear-gradient(145deg, #10b981, #059669);
+    border: 3px solid white;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+    transition: all 0.15s ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+.game-button:hover, .game-button:active {
+    background: linear-gradient(145deg, #059669, #047857);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.4);
+}
+
+.gold-button {
+    background: linear-gradient(145deg, #f59e0b, #d97706);
+    border: 3px solid white;
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+    transition: all 0.15s ease;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+.gold-button:hover, .gold-button:active {
+    background: linear-gradient(145deg, #d97706, #b45309);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.4);
+}
+
+.map-icon {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.2s ease;
+}
+
+.map-icon.unlocked {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.map-icon.unlocked:hover {
+    transform: scale(1.05);
+}
+
+.loading-bar {
+    background: linear-gradient(90deg, #10b981, #f59e0b);
+    border-radius: 20px;
+    height: 20px;
+    transition: width 0.2s ease;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-up {
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.player-glow-rainbow {
+        filter: drop-shadow(0 0 20px #00BFFF) drop-shadow(0 0 40px #00BFFF) drop-shadow(0 0 60px #00BFFF);
+        animation: rainbow-pulse 0.5s ease-in-out infinite alternate;
+    }
+    
+    .player-glow-speed {
+        filter: drop-shadow(0 0 20px #00FF00) drop-shadow(0 0 40px #00FF00) drop-shadow(0 0 60px #00FF00);
+        animation: speed-pulse 0.3s ease-in-out infinite alternate;
+    }
+    
+    .player-glow-slow {
+        filter: drop-shadow(0 0 20px #FFA500) drop-shadow(0 0 40px #FFA500) drop-shadow(0 0 60px #FFA500);
+        animation: slow-pulse 0.8s ease-in-out infinite alternate;
+    }
+    
+    @keyframes rainbow-pulse {
+        0% { filter: drop-shadow(0 0 20px #00BFFF) drop-shadow(0 0 40px #00BFFF) drop-shadow(0 0 60px #00BFFF); }
+        100% { filter: drop-shadow(0 0 30px #00BFFF) drop-shadow(0 0 50px #00BFFF) drop-shadow(0 0 70px #00BFFF); }
+    }
+    
+    @keyframes speed-pulse {
+        0% { filter: drop-shadow(0 0 20px #00FF00) drop-shadow(0 0 40px #00FF00) drop-shadow(0 0 60px #00FF00); }
+        100% { filter: drop-shadow(0 0 30px #00FF00) drop-shadow(0 0 50px #00FF00) drop-shadow(0 0 70px #00FF00); }
+    }
+    
+    @keyframes slow-pulse {
+        0% { filter: drop-shadow(0 0 20px #FFA500) drop-shadow(0 0 40px #FFA500) drop-shadow(0 0 60px #FFA500); }
+        100% { filter: drop-shadow(0 0 30px #FFA500) drop-shadow(0 0 50px #FFA500) drop-shadow(0 0 70px #FFA500); }
+    }
